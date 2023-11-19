@@ -1,6 +1,6 @@
 # BCGCodeChallenge
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
+
 1.	Installation process
 2.	Software dependencies : .NetCore SDK
 3.  Run on Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
@@ -11,3 +11,12 @@ TODO: Guide users through getting your code up and running on their own system. 
 2. To add SSL Cert : "dotnet dev-certs https --trust"
 3. To build the project : "dotnet build"
 4. To Run the project: "dotnet run"
+
+# Endpoints:
+1. Http: http://localhost:5251
+2. Https: https://localhost:7165
+
+# Xunit Project Details
+1. Project name EcommerceApiTests
+2. Execute Test case with command: "dotnet test"
+
