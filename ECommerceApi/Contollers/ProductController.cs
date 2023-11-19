@@ -35,8 +35,13 @@ public class ProductController : ControllerBase
     [HttpPost("purchaseorder")]
     public ActionResult PurchaseOrder( IList<int> productIds)
     {
-        decimal price = _productService.PriceCalculator(productIds);
-        return Ok(price);
+        if (productIds == null || productIds.Count == 0){
+             return BadRequest("No Purchase Items Exists"); 
+        }
+        decimal totalPrice = _productService.PriceCalculator(productIds);
+        
+       
+        return Ok(new { price = totalPrice });
     }
 
 }
