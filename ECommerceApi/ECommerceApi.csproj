@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
+    <ProjectGuid>{E165498C-E142-49F2-8CD7-E691188C48BB}</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,13 +13,19 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Moq" Version="4.20.69" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    
+     <InternalsVisibleTo Include="MinimalApiPlayground.Tests" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     
     <PackageReference Include="System.ComponentModel" Version="4.3.0" />
     
     <PackageReference Include="System.Linq" Version="4.3.0" />
   </ItemGroup>
+  
+
+
 
 </Project>
+<!-- Project("{b8255e30-042f-4ea4-bb87-bd575121a225}") = "ECommerceApi.Tests", "ECommerceApi.Tests\ECommerceApi.Tests.csproj", "{34ee6cd0-2b2a-4053-b283-d1a7a1f42bf5}"
+EndProject -->

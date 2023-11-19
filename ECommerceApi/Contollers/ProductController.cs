@@ -20,7 +20,7 @@ public class ProductController : ControllerBase
         return Ok(_productService.GetProducts());
     }
 
-    
+
     [HttpPost]
     public ActionResult AddProduct([FromBody] IList<Product> products)
     {
@@ -30,8 +30,18 @@ public class ProductController : ControllerBase
         }
         _productService.AddProduct(products);
         return Ok(products);
+
+    }
+    [HttpPost("purchaseorder")]
+    public ActionResult PurchaseOrder( IList<int> productIds)
+    {
+        if (productIds == null || productIds.Count == 0){
+             return BadRequest("No Purchase Items Exists"); 
+        }
+        decimal totalPrice = _productService.PriceCalculator(productIds);
         
+       
+        return Ok(new { price = totalPrice });
     }
 
-    
 }

@@ -12,12 +12,13 @@ public static class FilesReadWrite
         string filePath = GetFileLocation();
         string jsonData = JsonConvert.SerializeObject(data, Formatting.Indented);
 
-        // Ensure the directory exists
+        
         Directory.CreateDirectory(Path.GetDirectoryName(filePath));
 
         // Write the JSON data to the file
         File.WriteAllText(filePath, jsonData);
-        return ($"Data written to {filePath}");
+        string result = $"Data written to {filePath}";
+        return result;
 
     }
     public static List<Product> ReadFromJsonFile()
