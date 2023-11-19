@@ -20,7 +20,7 @@ public class ProductController : ControllerBase
         return Ok(_productService.GetProducts());
     }
 
-    
+
     [HttpPost]
     public ActionResult AddProduct([FromBody] IList<Product> products)
     {
@@ -30,8 +30,13 @@ public class ProductController : ControllerBase
         }
         _productService.AddProduct(products);
         return Ok(products);
-        
+
+    }
+    [HttpPost("purchaseorder")]
+    public ActionResult PurchaseOrder( IList<int> productIds)
+    {
+        decimal price = _productService.PriceCalculator(productIds);
+        return Ok(price);
     }
 
-    
 }

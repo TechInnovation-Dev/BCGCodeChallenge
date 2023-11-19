@@ -11,9 +11,26 @@
   },
   {
     "Id": 2,
-    "Name": "Titan",
-    "isDiscountApply": false,
+    "Name": "Michael Kors",
+    "isDiscountApply": true,
     "Price": 80.0,
+    "discount": {
+      "count": 2,
+      "price": 120.0
+    }
+  },
+  {
+    "Id": 3,
+    "Name": "Swatch",
+    "isDiscountApply": false,
+    "Price": 50.0,
+    "discount": null
+  },
+  {
+    "Id": 4,
+    "Name": "Casio",
+    "isDiscountApply": false,
+    "Price": 30.0,
     "discount": null
   }
 ]
